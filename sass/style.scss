@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
 
 *{
     padding: 0;
@@ -39,7 +39,7 @@
     }
 
     &__main-content {
-        padding: 5rem 1.5rem 2.5rem 1.5rem;
+     padding: 5.5rem 1.5rem 2.5rem 1.5rem;
      display: flex;
      flex-direction: column;
      flex-grow: 1;
@@ -78,73 +78,76 @@
 
     &__title {
         padding: 0rem 2rem;
-        color: hsl(0, 0%, 100%);
+        color: hsla(0, 0%, 100%, 0.95);
         font-size: 1.7rem;
         font-weight: 700;
         font-family: 'Poppins', sans-serif;
+        line-height: 2.3rem;
         opacity: 0.9;
     }
 
     &__description {
-        margin-top: 1.3rem;
-        color: hsl(0, 0%, 100%);
+        margin-top: 1.4rem;
+        color: hsla(0, 0%, 100%, 0.71);
         font-size: 1rem;
-        font-weight: 400;
+        font-weight: 500;
         font-family: 'Poppins', sans-serif;
-        opacity: 0.8;
+        line-height: 1.65rem;
     }
 }
 
 article{
     width: 100%;
-    margin-top: 2.6rem;
+    margin-top: 3.95rem;
     display: flex;
     flex-direction: column;
     background-color: transparent;
 }
 .trial{
-    padding: 1.1rem 3rem;
+    width: 100%;
+    padding: 1.1rem 3.5rem;
     display: block;
     color:hsl(0, 0%, 100%); 
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-weight: 600;
     font-family: 'Poppins', sans-serif;
+    line-height: 1.65rem;
     background-color: hsl(248, 32%, 49%);
     text-align: center;
-    border-radius: 0.3rem;
-    -webkit-box-shadow: 0px 6px 0px 1px hsla(0, 100%, 41%, 0.247); 
-    box-shadow: 0px 6px 0px 1px hsla(0, 100%, 41%, 0.247);
+    border-radius: 0.6rem;
+    -webkit-box-shadow: 0px 7px 0px 1px hsla(0, 100%, 15%, 0.2); 
+    box-shadow: 0px 7px 0px 1px hsla(0, 100%, 15%, 0.2);
     span{
         font-weight: 400;
         color:hsla(0, 0%, 100%, 0.770);
     }
 }
 .form-container{
-    max-width: 20rem;
-    margin-top: 1.7rem;
+    width: 100%;
+    margin-top: 1.5rem;
     padding: 1.3rem;
     background-color: hsl(0, 0%, 100%);
     text-align: center;
-    border-radius: 0.3rem;
-    -webkit-box-shadow: 0px 6px 0px 1px hsla(0, 100%, 41%, 0.247); 
-    box-shadow: 0px 6px 0px 1px hsla(0, 100%, 41%, 0.247);
+    border-radius: 0.6rem;
+    -webkit-box-shadow: 0px 7px 0px 1px hsla(0, 100%, 15%, 0.2); 
+    box-shadow: 0px 7px 0px 1px hsla(0, 100%, 15%, 0.2);
 }
 form {
     width: 100%;
-    margin-bottom: 1rem;
+    margin-bottom: 0.8rem;
     display: flex;
     flex-direction: column;
 }
 
 input {
-    margin-bottom: 0.3rem;
-    padding: 0.7rem 3rem 0.7rem 1.5rem;
+    margin-bottom: 0.95rem;
+    padding: 1rem 3rem 1rem 1.5rem;
     color: hsl(249, 10%, 26%);
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-weight: 600;
     font-family: 'Poppins', sans-serif;
     border-radius: 0.3rem;
-    border: 0.13rem solid hsl(0, 0%, 85%);
+    border: 0.13rem solid hsl(0, 0%, 93%);
     outline: none;
     transition: border ease-in-out 0.3s;
 
@@ -152,9 +155,9 @@ input {
         border: 0.13rem solid hsl(248, 32%, 49%);
     }
 
-    //&::placeholder{
-     //   opacity: 0.6;
-    //}
+    &::placeholder{
+        opacity: 0.65;
+    }
 }
 .form__input--error{
     border: 0.13rem solid hsl(0, 100%, 74%);
@@ -164,12 +167,12 @@ input {
 }
 
 .form__error-message{
-    height: 0.7rem;
-    margin-bottom: 1rem;
+    height: 0rem;
+    margin-bottom: 0rem;
     text-align: right;
     color: hsl(0, 100%, 74%);
     font-size: 0.7rem;
-    font-weight: 400;
+    font-weight: 500;
     font-style: italic;
     font-family: 'Poppins', sans-serif;
     opacity: 0;
@@ -177,25 +180,51 @@ input {
 }
 
 button {
-    padding: 0.7rem;
+    padding: 1.2rem 0.7rem 0.6rem 0.7rem;
     color:hsl(0, 0%, 100%);
     background-color: hsl(154, 59%, 51%);
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-family: 'Poppins', sans-serif;
     text-transform: uppercase;
+    letter-spacing: 0.1rem;
     border:none;
     border-radius: 0.3rem;
-    border-bottom: 0.15rem solid hsl(246, 25%, 77%);
+    -webkit-box-shadow: 0px 3px 0px 1px hsla(154, 80%, 33%, 0.7); 
+    box-shadow: 0px 3px 0px 1px hsla(154, 80%, 33%, 0.7);
     outline: none;
 }
 .form-container__tos{
     padding: 0 1rem;
+    margin-bottom: 0.15rem;
     color: hsl(246, 25%, 77%);
     font-size: 0.7rem;
     font-weight: 500;
     font-family: 'Poppins', sans-serif;
+    line-height: 1.3rem;
 }
 .form-container__tos--red{
     color: hsl(0, 100%, 74%);
     font-weight: 700;
+}
+@media (min-width: 376px) {
+    .wrapper{
+        &__main-content {
+            padding: 5.5rem 10.5rem 2.5rem 10.5rem;
+            flex-direction: row;
+        }
+    }   
+    
+    .header{
+        margin-right: 3.4rem;
+        align-items:flex-start;
+        text-align: left;
+
+        &__title {
+            padding: 0;
+        }
+    }
+
+    article {
+        width: 70rem;
+    }   
 }
