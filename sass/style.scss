@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
 
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-.sr-only{
+.sr-only {
     position: absolute;
     width: 1px;
     height: 1px;
@@ -17,7 +17,7 @@
     border: 0;
 }
 
-.wrapper{
+.wrapper {
     width: 100vw;
     min-height: 100vh;
     position: relative;
@@ -59,17 +59,20 @@
         font-weight: 400;
         font-family: 'Poppins', sans-serif;
         opacity: 0.8;
-        a{
-            color: hsl(248, 32%, 49%);
-            font-weight: 600;
-            text-decoration: none;
-        }
-        a:hover{
+    }
+
+    &__footer-attribution-link {
+        color: hsl(248, 32%, 49%);
+        font-weight: 600;
+        text-decoration: none;
+
+        &:hover{
             text-decoration: underline;
         }
     }
 }
-.header{
+
+.header {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -96,135 +99,182 @@
     }
 }
 
-article{
+.trial-claim{
     width: 100%;
     margin-top: 3.95rem;
     display: flex;
     flex-direction: column;
     background-color: transparent;
-}
-.trial{
-    width: 100%;
-    padding: 1.1rem 3.5rem;
-    display: block;
-    color:hsl(0, 0%, 100%); 
-    font-size: 0.9rem;
-    font-weight: 600;
-    font-family: 'Poppins', sans-serif;
-    line-height: 1.65rem;
-    background-color: hsl(248, 32%, 49%);
-    text-align: center;
-    border-radius: 0.6rem;
-    -webkit-box-shadow: 0px 7px 0px 1px hsla(0, 100%, 15%, 0.2); 
-    box-shadow: 0px 7px 0px 1px hsla(0, 100%, 15%, 0.2);
-    span{
-        font-weight: 400;
-        color:hsla(0, 0%, 100%, 0.770);
-    }
-}
-.form-container{
-    width: 100%;
-    margin-top: 1.5rem;
-    padding: 1.3rem;
-    background-color: hsl(0, 0%, 100%);
-    text-align: center;
-    border-radius: 0.6rem;
-    -webkit-box-shadow: 0px 7px 0px 1px hsla(0, 100%, 15%, 0.2); 
-    box-shadow: 0px 7px 0px 1px hsla(0, 100%, 15%, 0.2);
-}
-form {
-    width: 100%;
-    margin-bottom: 0.8rem;
-    display: flex;
-    flex-direction: column;
-}
 
-input {
-    margin-bottom: 0.95rem;
-    padding: 1rem 3rem 1rem 1.5rem;
-    color: hsl(249, 10%, 26%);
-    font-size: 0.9rem;
-    font-weight: 600;
-    font-family: 'Poppins', sans-serif;
-    border-radius: 0.3rem;
-    border: 0.13rem solid hsl(0, 0%, 93%);
-    outline: none;
-    transition: border ease-in-out 0.3s;
-
-    &:focus {
-        border: 0.13rem solid hsl(248, 32%, 49%);
+    &__title{
+        width: 100%;
+        padding: 1.1rem 3.5rem;
+        display: block;
+        color:hsl(0, 0%, 100%); 
+        font-size: 0.9rem;
+        font-weight: 600;
+        font-family: 'Poppins', sans-serif;
+        line-height: 1.65rem;
+        background-color: hsl(248, 32%, 49%);
+        text-align: center;
+        border-radius: 0.6rem;
+        -webkit-box-shadow: 0px 7px 0px 0px hsla(0, 100%, 15%, 0.2); 
+        box-shadow: 0px 7px 0px 0px hsla(0, 100%, 15%, 0.2);
+        span{
+            font-weight: 400;
+            color:hsla(0, 0%, 100%, 0.770);
+        }
     }
 
-    &::placeholder{
-        opacity: 0.65;
+    &__form-container{
+        width: 100%;
+        margin-top: 1.5rem;
+        padding: 1.3rem;
+        background-color: hsl(0, 0%, 100%);
+        text-align: center;
+        border-radius: 0.6rem;
+        -webkit-box-shadow: 0px 7px 0px 0px hsla(0, 100%, 15%, 0.2); 
+        box-shadow: 0px 7px 0px 0px hsla(0, 100%, 15%, 0.2);
     }
-}
-.form__input--error{
-    border: 0.13rem solid hsl(0, 100%, 74%);
-    background: url(../images/icon-error.svg);
-    background-repeat: no-repeat;
-    background-position: right 1rem center;
-}
 
-.form__error-message{
-    height: 0rem;
-    margin-bottom: 0rem;
-    text-align: right;
-    color: hsl(0, 100%, 74%);
-    font-size: 0.7rem;
-    font-weight: 500;
-    font-style: italic;
-    font-family: 'Poppins', sans-serif;
-    opacity: 0;
-    transition: opacity ease-in-out 0.3s;
-}
+    &__form {
+        width: 100%;
+        margin-bottom: 0.8rem;
+        display: flex;
+        flex-direction: column;
+    }
 
-button {
-    padding: 1.2rem 0.7rem 0.6rem 0.7rem;
-    color:hsl(0, 0%, 100%);
-    background-color: hsl(154, 59%, 51%);
-    font-size: 0.9rem;
-    font-family: 'Poppins', sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 0.1rem;
-    border:none;
-    border-radius: 0.3rem;
-    -webkit-box-shadow: 0px 3px 0px 1px hsla(154, 80%, 33%, 0.7); 
-    box-shadow: 0px 3px 0px 1px hsla(154, 80%, 33%, 0.7);
-    outline: none;
-}
-.form-container__tos{
-    padding: 0 1rem;
-    margin-bottom: 0.15rem;
-    color: hsl(246, 25%, 77%);
-    font-size: 0.7rem;
-    font-weight: 500;
-    font-family: 'Poppins', sans-serif;
-    line-height: 1.3rem;
-}
-.form-container__tos--red{
-    color: hsl(0, 100%, 74%);
-    font-weight: 700;
+    &__form-input {
+        margin-bottom: 0.95rem;
+        padding: 1rem 3rem 1rem 1.5rem;
+        color: hsla(249, 10%, 26%, 0.85);
+        font-size: 0.9rem;
+        font-weight: 600;
+        font-family: 'Poppins', sans-serif;
+        border-radius: 0.3rem;
+        border: 0.13rem solid hsl(0, 0%, 93%);
+        outline: none;
+        transition: border ease-in-out 0.3s;
+
+        &:focus {
+            border: 0.13rem solid hsla(248, 32%, 49%, 0.5);
+        }
+
+        &::placeholder{
+            opacity: 0.65;
+        }
+    }
+
+    &__form-input--error{
+        border: 0.13rem solid hsl(0, 100%, 74%);
+        background: url(../images/icon-error.svg);
+        background-repeat: no-repeat;
+        background-position: right 1rem center;
+    }
+
+    &__form-error-message{
+        margin-bottom: 0rem;
+        text-align: right;
+        color: hsl(0, 100%, 74%);
+        font-size: 0.7rem;
+        font-weight: 500;
+        font-style: italic;
+        font-family: 'Poppins', sans-serif;
+        transition: opacity ease-in-out 0.3s;
+    }
+
+    &__form-submit {
+        padding: 1.2rem 0.7rem 0.6rem 0.7rem;
+        color:hsl(0, 0%, 100%);
+        background-color: hsl(154, 59%, 51%);
+        font-size: 0.9rem;
+        font-family: 'Poppins', sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 0.1rem;
+        border:none;
+        border-radius: 0.3rem;
+        -webkit-box-shadow: 0px 4px 0px 0.4px hsla(154, 80%, 33%, 0.7); 
+        box-shadow: 0px 4px 0px 0.4px hsla(154, 80%, 33%, 0.7);
+        outline: none;
+    }
+
+    &__tos {
+        padding: 0 1rem;
+        margin-bottom: 0.15rem;
+        color: hsl(246, 25%, 77%);
+        font-size: 0.7rem;
+        font-weight: 500;
+        font-family: 'Poppins', sans-serif;
+        line-height: 1.3rem;
+    }
+
+    &__tos--red {
+        color: hsl(0, 100%, 74%);
+        font-weight: 700;
+    }
 }
 @media (min-width: 376px) {
     .wrapper{
+        background: url(../images/bg-intro-desktop.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+
         &__main-content {
-            padding: 5.5rem 10.5rem 2.5rem 10.5rem;
+            padding: 5.5rem 9.5rem 2.5rem 9.5rem;
             flex-direction: row;
         }
     }   
     
     .header{
-        margin-right: 3.4rem;
+        margin-right: 3.7rem;
         align-items:flex-start;
         text-align: left;
 
         &__title {
             padding: 0;
+            font-size: 2.75rem;
+            line-height: 3rem;
+        }
+
+        &__description {
+            margin-top: 1.4rem;
         }
     }
 
-    article {
-        width: 70rem;
+    .trial-claim {
+        min-width: 35rem;
+        max-width: 35rem;
+        margin-top: 0;
+        
+        &__form-container{
+            padding: 2.5rem;
+        }
+
+        &__form {
+            margin-bottom: 1rem;
+        }
+
+        &__form-input {
+            margin-bottom: 0.4rem;
+        }
+
+        &__form-error-message {
+            margin-bottom: 0.8rem;
+        }
+
+        &__form-error-message--active {
+            margin-bottom: 1.1rem;
+        }
+
+        &__form-submit {
+            transition: all ease-in-out 0.3s;
+        
+            &:hover {
+                background-color: hsla(154, 59%, 51%, 0.63);
+                -webkit-box-shadow: 0px 4px 0px 0.4px hsla(154, 80%, 33%, 0.57); 
+                box-shadow: 0px 4px 0px 0.4px hsla(154, 80%, 33%, 0.57);
+                cursor: pointer;
+            }
+        }
     }   
 }

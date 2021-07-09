@@ -23,35 +23,40 @@
           tutorials is great,
           but understanding how developers think is invaluable.</p>
       </header>
-      <article class="">
-        <p class="trial">Try it free 7 days <span>then $20/mo. thereafter</span></p>
-        <div class="form-container">
-          <form id="free-trial-form" class="form" action="#" method="POST">
-            <label for="firstName" class="sr-only">First Name</label>
-            <input id="firstName" class="form__input" type="text" placeholder="First Name" name="firstName">
-            <span class="form__error-message"></span>
-            <label for="lastName" class="sr-only">Last Name</label>
-            <input id="lastName" class="form__input" type="text" placeholder="Last Name" name="lastName">
-            <span class="form__error-message"></span>
-            <label for="email" class="sr-only">Email Address</label>
-            <input id="email" class="form__input" type="email" placeholder="Email Address" name="email">
-            <span class="form__error-message"></span>
+      <article class="trial-claim">
+        <h2 class="trial-claim__title">Try it free 7 days <span class="trial-claim__title--color">then $20/mo.
+            thereafter</span></h2>
+        <div class="trial-claim__form-container">
+          <form class="trial-claim__form" action="#" method="POST">
+            <label for="first-name" class="sr-only">First Name</label>
+            <input id="first-name" class="trial-claim__form-input" type="text" placeholder="First Name"
+              name="firstName">
+            <span class="trial-claim__form-error-message"></span>
+            <label for="last-name" class="sr-only">Last Name</label>
+            <input id="last-name" class="trial-claim__form-input" type="text" placeholder="Last Name" name="lastName">
+            <span class="trial-claim__form-error-message"></span>
+            <label for="email-address" class="sr-only">Email Address</label>
+            <input id="email-address" class="trial-claim__form-input" type="email" placeholder="Email Address"
+              name="email">
+            <span class="trial-claim__form-error-message"></span>
             <label for="password" class="sr-only">Password</label>
-            <input id="password" class="form__input" type="password" placeholder="Password" name="password">
-            <span class="form__error-message"></span>
-            <button id="submit-btn" class="form__button form__button-color" type="submit"> Claim your free
+            <input id="password" class="trial-claim__form-input" type="password" placeholder="Password" name="password">
+            <span class="trial-claim__form-error-message"></span>
+            <button id="submit-btn" class="trial-claim__form-submit trial-claim__form-submit-color" type="submit"> Claim
+              your free
               trial</button>
           </form>
-          <p class="form-container__tos">By clicking the button, you are agreeing to our <span
-              class="form-container__tos--red">Terms and Services</span>
+          <p class="trial-claim__tos">By clicking the button, you are agreeing to our <span
+              class="trial-claim__tos--red">Terms and Services</span>
           </p>
         </div>
       </article>
     </main>
     <footer class="wrapper__footer">
-      <p class="attribution">
-        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-        Coded by <a href="#">Uros Tomic</a>.
+      <p class="wrapper__footer-attribution">
+        Challenge by <a class="wrapper__footer-attribution-link" href="https://www.frontendmentor.io?ref=challenge"
+          target="_blank">Frontend Mentor</a>.
+        Coded by <a class="wrapper__footer-attribution-link" href="#">Uros Tomic</a>.
       </p>
     </footer>
   </div>
