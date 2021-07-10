@@ -1,10 +1,26 @@
+/*----------------------------
+	Font Import
+----------------------------*/
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+
+/*----------------------------
+	Variables definition
+----------------------------*/
+
+/*----------------------------
+	General styling
+----------------------------*/
 
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
+
+/*----------------------------
+	Screen reader
+----------------------------*/
 
 .sr-only {
     position: absolute;
@@ -17,23 +33,29 @@
     border: 0;
 }
 
+/*----------------------------
+	Intro component
+----------------------------*/
+
 .wrapper {
-    width: 100vw;
     min-height: 100vh;
     position: relative;
     display: flex;
     flex-direction: column;
-    background: url(../images/bg-intro-mobile.png);
+    background-image: url(../images/bg-intro-mobile.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     
-    &__overlay{
+    &__overlay {
         width: 100%;
         height: 100%;
         position: absolute;
         top: 0;
-        left:0;
+        left: 0;
     }
 
-    &__overlay--color{
+    &__overlay--color {
         background-color: hsl(0, 100%, 74%);
         z-index: -1;
     }
@@ -61,18 +83,23 @@
         opacity: 0.8;
     }
 
+    &__footer-attribution {
+        margin-left: 0rem;
+    }
+
     &__footer-attribution-link {
         color: hsl(248, 32%, 49%);
         font-weight: 600;
         text-decoration: none;
 
-        &:hover{
+        &:hover {
             text-decoration: underline;
         }
     }
 }
 
 .header {
+    max-width: 35rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -99,14 +126,15 @@
     }
 }
 
-.trial-claim{
+.trial-claim {
     width: 100%;
+    max-width: 35rem;
     margin-top: 3.95rem;
     display: flex;
     flex-direction: column;
     background-color: transparent;
 
-    &__title{
+    &__title {
         width: 100%;
         padding: 1.1rem 3.5rem;
         display: block;
@@ -120,10 +148,11 @@
         border-radius: 0.6rem;
         -webkit-box-shadow: 0px 7px 0px 0px hsla(0, 100%, 15%, 0.2); 
         box-shadow: 0px 7px 0px 0px hsla(0, 100%, 15%, 0.2);
-        span{
-            font-weight: 400;
-            color:hsla(0, 0%, 100%, 0.770);
-        }
+    }
+
+    &__title--color {
+        font-weight: 400;
+        color:hsla(0, 0%, 100%, 0.770);
     }
 
     &__form-container{
@@ -161,7 +190,7 @@
         }
 
         &::placeholder{
-            opacity: 0.65;
+            opacity: 0.8;
         }
     }
 
@@ -213,15 +242,40 @@
         font-weight: 700;
     }
 }
-@media (min-width: 376px) {
+
+/*----------------------------
+	Media queries
+----------------------------*/ 
+
+@media (min-width: 459px) and (max-width: 1153px) {
     .wrapper{
-        background: url(../images/bg-intro-desktop.png);
-        background-repeat: no-repeat;
-        background-size: cover;
+        background-image: url(../images/bg-intro-desktop.png);
+
+        &__footer {
+            padding: 1rem 1.5rem;
+            flex-direction: row;
+        }
+
+        &__footer-attribution {
+            margin-left: 0.3rem;
+        }
+    } 
+
+}
+@media (min-width: 1154px) {
+    .wrapper{
+        background-image: url(../images/bg-intro-desktop.png);
 
         &__main-content {
-            padding: 5.5rem 9.5rem 2.5rem 9.5rem;
             flex-direction: row;
+        }
+
+        &__footer {
+            flex-direction: row;
+        }
+
+        &__footer-attribution {
+            margin-left: 0.3rem;
         }
     }   
     
@@ -232,12 +286,12 @@
 
         &__title {
             padding: 0;
-            font-size: 2.75rem;
+            font-size: 3.1rem;
             line-height: 3rem;
         }
 
         &__description {
-            margin-top: 1.4rem;
+            margin-top: 2.3rem;
         }
     }
 

@@ -1,23 +1,33 @@
+// selecting the submit button from the DOM
 let submitBtn = document.getElementById("submit-btn");
-
+// checking if the submit button has been clicked
 submitBtn.addEventListener("click", (e) => {
+    // preventing the default behavior of the submit button
     e.preventDefault();
-    let foundErrors = validateForm();
+    // declaring 
+    let firstName = document.getElementById("first-name");
+    let lastName = document.getElementById("last-name");
+    let email = document.getElementById("email-address");
+    let password = document.getElementById("password");
+    // calling the form validation function and passing in the input fields that need to be checked
+    let foundErrors = validateForm(firstName, lastName, email, password);
+    // if validation has been passed send the form and reset the input fields
     if (foundErrors.length === 0) {
-        document.getElementById("free-trial-form").submit();
+        // document.getElementById("trial-claim-form").submit();
+        firstName.value = ""
+        lastName.value = ""
+        email.value = ""
+        password.value = ""
     }
+    // if validation hasn't been passed display errors and listen for change
     else {
         displayErrorMessage(foundErrors);
         removeErrorMessage(foundErrors);
     }
 });
-
-function validateForm() {
+// validating inputs
+function validateForm(firstName, lastName, email, password) {
     let failures = [];
-    let firstName = document.getElementById("first-name");
-    let lastName = document.getElementById("last-name");
-    let email = document.getElementById("email-address");
-    let password = document.getElementById("password");
     if (firstName.value === "") {
         failures.push({ input: `${firstName.id}`, errorMessage: "First Name cannot be empty" })
     }
@@ -38,7 +48,7 @@ function validateForm() {
     }
     return failures;
 }
-
+// apply the error styling and appropriate message if an input field is empty or the email address is not valid
 function displayErrorMessage(foundErrors) {
     foundErrors.forEach(foundError => {
         let targetInput = document.getElementById(foundError.input)
@@ -49,7 +59,7 @@ function displayErrorMessage(foundErrors) {
         targetInput.placeholder = "";
     });
 }
-
+// removing the error styling and message after the user starts typing
 function removeErrorMessage(foundErrors) {
     foundErrors.forEach(foundError => {
         let targetInput = document.getElementById(foundError.input);

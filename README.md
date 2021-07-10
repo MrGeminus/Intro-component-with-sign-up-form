@@ -34,7 +34,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [https://www.frontendmentor.io/solutions/bem-javascript-sass-html5-mobilefirst-flexbox-regex-m1Llv-62i](https://www.frontendmentor.io/solutions/bem-javascript-sass-html5-mobilefirst-flexbox-regex-m1Llv-62i)
 - Live Site URL: [https://mrgeminus.github.io/Intro-component-with-sign-up-form/](https://mrgeminus.github.io/Intro-component-with-sign-up-form/)
 
 ## My process
@@ -42,10 +42,11 @@ Users should be able to:
 ### Built with
 
 - Semantic HTML5 markup
-- CSS custom properties
+- CSS pre-processor (SASS)
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
+- BEM
 
 ### What I learned
 
